@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 
-import smash from './assets/smash.avif'
-
 function App() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
