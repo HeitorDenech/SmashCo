@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700;1,900&family=Outfit:wght@300;400;500;600&display=swap');
+
+:root {
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+
+  --color-brand-black: #0d0d0d;
+  --color-brand-charcoal: #1a1a1a;
+  --color-brand-ash: #2a2a2a;
+  --color-brand-cream: #f5f0e8;
+  --color-brand-ivory: #faf7f2;
+  --color-brand-orange: #e84b1a;
+  --color-brand-orange-light: #ff6b35;
+  --color-brand-muted: #888580;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-brand-black);
+  color: var(--color-brand-cream);
+}
