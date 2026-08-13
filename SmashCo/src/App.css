@@ -13,10 +13,9 @@ header {
   width: 100%;
   background-color: transparent;
   position: fixed;
-  /* mantém o header fixo no topo */
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .navbar {
@@ -35,13 +34,24 @@ header {
   /* leve vidro fosco */
 }
 
-.navbar h1 {
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-logo img {
+  height: 50px;
+  width: auto;
+}
+
+.navbar-logo h1 {
   font-family: var(--font-display);
   font-size: 2rem;
   font-weight: 700;
 }
 
-.navbar span {
+.navbar-logo span {
   color: var(--color-brand-orange);
 }
 
@@ -89,21 +99,198 @@ header {
 
 /* ---------------------------------MAIN------------------------------ */
 
-main {
+.hero {
   height: 100vh;
   background-image: url('./assets/smash.avif');
   background-size: cover;
   background-position: center;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding-left: 5rem;
+  flex-direction: column;
 }
 
-main::before {
+.hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
 }
 
-/* ------------------------------------CELULAR-------------------------------- */
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7vh;
+  width: 20vw;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-brand-orange);
+  font-family: var(--font-display);
+  font-size: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-brand-orange);
+  z-index: 1000;
+}
+
+#hero-title {
+  font-family: var(--font-display);
+  font-size: 5rem;
+  width: 30%;
+  z-index: 1001;
+}
+
+#hero-title span {
+  color: var(--color-brand-orange);
+}
+
+#hero-subtitle {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  width: 50%;
+  z-index: 1001;
+  color: var(--color-brand-muted);
+  text-transform: uppercase;
+}
+
+.hero-content-btn {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+#ver-cardapio {
+  height: 2.5rem;
+  width: 8rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--color-brand-orange);
+  color: var(--color-brand-cream);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all .55s ease-in-out;
+  transform: scale(1);
+}
+
+#ver-cardapio:hover {
+  background-color: var(--color-brand-cream);
+  transform: scale(1.05);
+  color: black;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#promocoes {
+  height: 2.5rem;
+  width: 8rem;
+  border: 1px solid var(--color-brand-muted);
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: var(--color-brand-cream);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all .55s ease-in-out;
+  transform: scale(1);
+}
+
+#promocoes:hover {
+  background-color: var(--color-brand-cream);
+  transform: scale(1.05);
+  color: black;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* ---------------------------------MENU-------------------------------------- */
+
+.menu {
+  height: 100vh;
+}
+
+.menu-content-text {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+#menu-title {
+  width: 10%;
+  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+}
+
+#menu-title span {
+  color: var(--color-brand-orange);
+}
+
+#menu-subtitle {
+  width: 20%;
+  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--color-brand-muted);
+}
+
+.menu-content-burguers {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu-content-burguers-card {
+  min-height: 60vh;
+  width: 30%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-brand-muted);
+  background-color: transparent;
+}
+
+.menu-content-burguers-card h1 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  text-transform: uppercase;
+  color: var(--color-brand-cream);
+}
+
+.menu-content-burguers-card p {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  color: var(--color-brand-muted);
+}
+
+.menu-content-burguers-card h2 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 3rem;
+  border-bottom: 1vh;
+  color: var(--color-brand-orange);
+  margin-bottom: 2vh;
+}
+
+.menu-content-burguers-card img {
+  height: 40vh;
+  width: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+
 
 /* ---------------------------------- HAMBURGER ------------------------------ */
 
@@ -128,7 +315,300 @@ main::before {
   transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 430px) {
+
+
+/* ---------------------------DESKTOP-GRANDE---------------------------- */
+
+@media screen and (min-width:1440px) {
+
+  .hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    width: 15vw;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-brand-orange);
+    font-family: var(--font-display);
+    font-size: 0.45rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-brand-orange);
+    z-index: 1001;
+  }
+
+  #hero-title {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    width: 30%;
+    z-index: 1001;
+  }
+
+  #hero-subtitle {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    width: 30%;
+    z-index: 1001;
+    color: var(--color-brand-muted);
+  }
+
+  /* ---------------------------------MENU------------------------------------ */
+
+  #menu-title {
+    width: 15%;
+    text-transform: uppercase;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+  }
+
+  #menu-subtitle {
+    width: 20%;
+    text-transform: uppercase;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--color-brand-muted);
+  }
+
+  .menu-content-burguers {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .menu-content-burguers-card {
+    width: 25%;
+  }
+
+}
+
+
+
+
+/* --------------------------------------NOTEBOOK-PEQUENO-------------------------------- */
+
+
+
+@media screen and (min-width: 1024px) and (max-width:1439px) {
+
+  .hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    width: 23vw;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-brand-orange);
+    font-family: var(--font-display);
+    font-size: 0.45rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-brand-orange);
+    z-index: 1001;
+  }
+
+  #hero-title {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    width: 40%;
+    z-index: 1001;
+  }
+
+  #hero-subtitle {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    width: 60%;
+    z-index: 1001;
+    color: var(--color-brand-muted);
+  }
+
+  /* -------------------------------------MENU----------------------------------------- */
+
+  #menu-title {
+    width: 15%;
+    text-transform: uppercase;
+    font-family: var(--font-display);
+    font-size: 1rem;
+  }
+
+  #menu-subtitle {
+    width: 20%;
+    text-transform: uppercase;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    color: var(--color-brand-muted);
+  }
+
+
+
+}
+
+/* ------------------------------------TABLET-------------------------------- */
+
+
+
+@media screen and (min-width: 768px) and (max-width:1023px) {
+
+  header {
+    height: auto;
+  }
+
+  .navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem 1.5rem;
+    box-sizing: border-box;
+    /* background-color: red; */
+  }
+
+  .navbar h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  /* MOSTRA O HAMBÚRGUER */
+
+  .hamburger {
+    display: flex;
+    z-index: 1002;
+  }
+
+  /* ESCONDE O BOTÃO PEDIR AGORA */
+
+  .navbar-btn {
+    display: none;
+  }
+
+  /* MENU FECHADO */
+
+  .navbar-text {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 2rem;
+
+    padding: 2rem 0;
+
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(8px);
+
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.3s ease;
+
+    z-index: 1001;
+  }
+
+  /* MENU ABERTO */
+
+  .navbar-text.active {
+    transform: translateY(1);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-text a {
+    font-size: 1.1rem;
+  }
+
+  /* ANIMAÇÃO DO HAMBÚRGUER */
+
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+  }
+
+
+
+  /* ----------------------------------MAIN------------------------------------ */
+
+  .hero {
+    padding-left: 3rem;
+  }
+
+  .hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    width: 30vw;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-brand-orange);
+    font-family: var(--font-display);
+    font-size: 0.45rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-brand-orange);
+    z-index: 1001;
+  }
+
+  #hero-title {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    width: 40%;
+    z-index: 1001;
+  }
+
+  #hero-subtitle {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    width: 60%;
+    z-index: 1001;
+    color: var(--color-brand-muted);
+  }
+
+  /* --------------------------------MENU----------------------------------- */
+
+  #menu-title {
+    width: 15%;
+    text-transform: uppercase;
+    font-family: var(--font-display);
+    font-size: 1rem;
+  }
+
+  #menu-subtitle {
+    width: 20%;
+    text-transform: uppercase;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    color: var(--color-brand-muted);
+  }
+
+  .menu-content-burguers {
+    flex-direction: row;
+    justify-content: start;
+    gap: 1rem;
+    margin-left: 2rem;
+  }
+
+  .menu-content-burguers-card {
+    margin-top: 1rem;
+    width: 45%;
+    height: 60vh;
+  }
+
+}
+
+
+
+/* ------------------------------CELULAR-GRANDE---------------------------------- */
+
+@media screen and (min-width: 431px) and (max-width: 767px) {
 
   header {
     height: auto;
@@ -151,7 +631,7 @@ main::before {
 
   .hamburger {
     display: flex;
-    z-index: 1002;
+    z-index: 1003;
   }
 
   /* ESCONDE O BOTÃO PEDIR AGORA */
@@ -212,4 +692,233 @@ main::before {
   .hamburger.active span:nth-child(3) {
     transform: translateY(-9.5px) rotate(-45deg);
   }
+
+
+
+  .hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    width: 37vw;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-brand-orange);
+    font-family: var(--font-display);
+    font-size: 0.45rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-brand-orange);
+    z-index: 1001;
+  }
+
+  #hero-title {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    width: 60%;
+    z-index: 1001;
+  }
+
+  #hero-subtitle {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    width: 50%;
+    z-index: 1001;
+    color: var(--color-brand-muted);
+  }
+
+  /* --------------------------MENU------------------------------------ */
+
+  #menu-title {
+    width: 15%;
+    text-transform: uppercase;
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+  }
+
+  #menu-subtitle {
+    width: 30%;
+    text-transform: uppercase;
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    color: var(--color-brand-muted);
+  }
+
+  .menu-content-burguers {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 0rem;
+  }
+
+  .menu-content-burguers-card {
+    width: 90%;
+    margin-top: 1rem;
+  }
+
+}
+
+
+
+/* ------------------------------------CELULAR-------------------------------- */
+
+
+
+@media screen and (max-width: 430px) {
+
+  header {
+    height: auto;
+  }
+
+  .navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .navbar h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  /* MOSTRA O HAMBÚRGUER */
+
+  .hamburger {
+    display: flex;
+    z-index: 1003;
+  }
+
+  /* ESCONDE O BOTÃO PEDIR AGORA */
+
+  .navbar-btn {
+    display: none;
+  }
+
+  /* MENU FECHADO */
+
+  .navbar-text {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1.5rem;
+
+    padding: 2rem 0;
+
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(8px);
+
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.3s ease;
+  }
+
+  /* MENU ABERTO */
+
+  .navbar-text.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-text a {
+    font-size: 1.1rem;
+  }
+
+  /* ANIMAÇÃO DO HAMBÚRGUER */
+
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+  }
+
+
+
+  /* ----------------------------------MAIN------------------------------------ */
+
+  .hero {
+    padding-left: 2rem;
+  }
+
+  .hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    width: 45vw;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-brand-orange);
+    font-family: var(--font-display);
+    font-size: 0.45rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-brand-orange);
+    z-index: 1001;
+  }
+
+  #hero-title {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    width: 60%;
+    z-index: 1001;
+  }
+
+  #hero-subtitle {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    width: 80%;
+    z-index: 1001;
+    color: var(--color-brand-muted);
+  }
+
+  /* -----------------------------MENU------------------------------- */
+
+  #menu-title {
+    width: 20%;
+    text-transform: uppercase;
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+  }
+
+  #menu-subtitle {
+    width: 30%;
+    text-transform: uppercase;
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    color: var(--color-brand-muted);
+  }
+
+  .menu-content-burguers {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .menu-content-burguers-card {
+    width: 90%;
+    margin-top: 1rem;
+  }
+
 }
