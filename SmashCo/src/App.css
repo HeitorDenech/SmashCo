@@ -905,87 +905,42 @@ header {
     flex-direction: column;
   }
 
+  .hero {
+    min-height: 100vh;
+    height: auto;
+    padding: 100px 2rem 40px;
+    box-sizing: border-box;
+  }
+
   .hero-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: clamp(30px, 8vh, 45px);
+    width: clamp(200px, 35vw, 250px);
 
-    height: clamp(30px, 4.5vh, 60px);
-    width: clamp(200px, 45vw, 250px);
-
-    border-radius: 0.5rem;
-    border: 1px solid var(--color-brand-orange);
-
-    font-family: var(--font-display);
-    font-size: clamp(0.45rem, 0.8vw, 0.7rem);
-    font-weight: 600;
-    text-transform: uppercase;
-    color: var(--color-brand-orange);
-
-    z-index: 1001;
+    font-size: clamp(0.45rem, 1.5vw, 0.65rem);
   }
 
   #hero-title {
-    font-family: var(--font-display);
-    /* font-size: 10vw; */
-    font-size: clamp(1rem, 10vw, 2rem);
-    width: 60%;
-    z-index: 1001;
+    font-size: clamp(1.8rem, 7vw, 3rem);
+    width: 70%;
+    margin: 0.5rem 0;
   }
 
   #hero-subtitle {
-    font-family: var(--font-display);
-    /* font-size: 3vw; */
-    font-size: clamp(0.5rem, 3vw, 1rem);
-    width: 80%;
-    z-index: 1001;
-    color: var(--color-brand-muted);
+    font-size: clamp(0.7rem, 2vw, 1rem);
+    width: 70%;
+    margin: 0.5rem 0;
   }
 
   .hero-content-btn {
-    margin-top: 1rem;
-    display: flex;
-    gap: clamp(0.5rem, 1vw, 1rem);
+    margin-top: 0.5rem;
+    gap: 0.5rem;
   }
 
   #ver-cardapio,
   #promocoes {
-    height: clamp(35px, 4vh, 45px);
-    width: clamp(120px, 8vw, 150px);
-
-    border-radius: 0.5rem;
-
-    font-family: var(--font-display);
-    font-size: clamp(0.75rem, 0.9vw, 1rem);
-    font-weight: 600;
-    text-transform: uppercase;
-
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-  }
-
-  #ver-cardapio {
-    border: none;
-    background-color: var(--color-brand-orange);
-    color: var(--color-brand-cream);
-  }
-
-  #ver-cardapio:hover {
-    background-color: var(--color-brand-cream);
-    color: black;
-    transform: scale(1.05);
-  }
-
-  #promocoes {
-    border: 1px solid var(--color-brand-muted);
-    background-color: transparent;
-    color: var(--color-brand-cream);
-  }
-
-  #promocoes:hover {
-    background-color: var(--color-brand-cream);
-    color: black;
-    transform: scale(1.05);
+    height: clamp(32px, 8vh, 42px);
+    width: clamp(110px, 20vw, 140px);
+    font-size: clamp(0.65rem, 1.5vw, 0.85rem);
   }
 
   /* -----------------------------MENU------------------------------- */
