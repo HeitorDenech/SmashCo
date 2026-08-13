@@ -155,6 +155,28 @@ function App() {
 
         </section>
 
+        <section className='promocoes'>
+          <p>Ofertas especiais</p>
+          <h1>PROMOÇÕES <span> QUE VALEM.</span></h1>
+
+          <div className='promocoes-container'>
+            
+            <div className='promocoes-container-card'>
+
+            </div>
+
+            <div className='promocoes-container-card'>
+
+            </div>
+
+            <div className='promocoes-container-card'>
+
+            </div>
+
+          </div>
+
+        </section>
+
       </main>
     </>
   )
