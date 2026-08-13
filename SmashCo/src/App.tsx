@@ -11,15 +11,20 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
+    let ticking = false
+
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 50)
+          ticking = false
+        })
+
+        ticking = true
       }
     }
 
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
@@ -134,7 +139,7 @@ function App() {
               </div>
               <h1>Smash picante</h1>
               <p>Smash duplo bovino, queijo americano, bacon, pimenta e picles.</p>
-              <h2>R$32</h2>
+              <h2>R$36</h2>
             </div>
 
             <div className="menu-content-burguers-card">
@@ -142,7 +147,7 @@ function App() {
                 <img src={smashsalada} alt="" />
                 <h1>Smash salada</h1>
                 <p>Smash bovino, queijo americano, ketchup, alface, tomate e picles.</p>
-                <h2>R$32</h2>
+                <h2>R$28</h2>
               </div>
             </div>
 
