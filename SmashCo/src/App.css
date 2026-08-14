@@ -352,7 +352,7 @@ header {
 }
 
 .promocoes-container-card {
-  height: 30vh;
+  /* height: 30vh; */
   width: 30%;
   border-radius: 20px;
   border: 1px solid var(--color-brand-muted);
@@ -372,6 +372,95 @@ header {
   --card-color: #5b4699;
 }
 
+/* ================= CORES DOS CARDS ================= */
+
+.promocoes-container-card:nth-child(1) {
+  --card-color: var(--color-brand-orange);
+}
+
+.promocoes-container-card:nth-child(2) {
+  --card-color: #2e8b68;
+}
+
+.promocoes-container-card:nth-child(3) {
+  --card-color: #5b4699;
+}
+
+
+/* ================= TEXTOS ================= */
+
+.promocoes-container-card:nth-child(1) {
+  --card-color: var(--color-brand-orange);
+}
+
+.promocoes-container-card:nth-child(2) {
+  --card-color: #2e8b68;
+}
+
+.promocoes-container-card:nth-child(3) {
+  --card-color: #5b4699;
+}
+
+.promocoes-container-card p {
+  margin: 1.5rem 1.5rem 0.5rem 1.5rem;
+
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+
+  text-transform: none;
+  color: var(--card-color);
+}
+
+.promocoes-container-card h1 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+}
+
+
+/* ================= COMPRA ================= */
+
+.promocoes-container-card-compra {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.promocoes-container-card-compra h2 {
+  font-weight: 800;
+}
+
+
+/* ================= BOTÃO ================= */
+
+.promocoes-container-card-compra button {
+  background-color: var(--card-color);
+
+  padding: 0.6rem 1rem;
+
+  color: var(--color-brand-cream);
+  border: 1px solid black;
+  border-radius: 10px;
+
+  font-family: var(--font-display);
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition: all 0.35s ease-in-out;
+  transform: scale(1);
+}
+
+.promocoes-container-card-compra button:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+  background-color: var(--color-brand-cream);
+  color: black;
+}
 
 /* ---------------------------------- HAMBURGER ------------------------------ */
 
@@ -475,9 +564,38 @@ header {
     justify-content: center;
   }
 
+  .promocoes-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
   .promocoes-container-card {
-    height: clamp(150px, 25vh, 400px);
-    width: 30%;
+    height: clamp(250px, 22vw, 310px);
+    width: calc((95% - 3rem) / 3);
+    min-width: 0;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .promocoes-container-card h1 {
+    margin-left: clamp(1rem, 2vw, 2rem);
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  }
+
+  .promocoes-container-card p {
+    margin-left: clamp(1rem, 2vw, 2rem);
+    font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+  }
+
+  .promocoes-container-card-compra {
+    margin-left: clamp(1rem, 2vw, 2rem);
+    gap: clamp(0.8rem, 2vw, 2rem);
   }
 
 }
@@ -555,11 +673,39 @@ header {
     justify-content: center;
   }
 
-  .promocoes-container-card {
-    height: clamp(150px, 25vh, 400px);
-    width: 30%;
+  .promocoes-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
   }
 
+  .promocoes-container-card {
+    height: clamp(250px, 22vw, 310px);
+    width: calc((95% - 3rem) / 3);
+    min-width: 0;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .promocoes-container-card h1 {
+    margin-left: clamp(1rem, 2vw, 2rem);
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  }
+
+  .promocoes-container-card p {
+    margin-left: clamp(1rem, 2vw, 2rem);
+    font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+  }
+
+  .promocoes-container-card-compra {
+    margin-left: clamp(1rem, 2vw, 2rem);
+    gap: clamp(0.8rem, 2vw, 2rem);
+  }
 }
 
 /* ------------------------------------TABLET-------------------------------- */
@@ -958,6 +1104,31 @@ header {
     width: 90%;
   }
 
+  .promocoes-container-card {
+    height: clamp(180px, 28vw, 300px);
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .promocoes-container-card h1 {
+    margin-left: clamp(1rem, 5vw, 3rem);
+    font-size: clamp(1.3rem, 5vw, 2.5rem);
+  }
+
+  .promocoes-container-card p {
+    margin-left: clamp(1rem, 5vw, 3rem);
+    font-size: clamp(0.8rem, 2.8vw, 1.2rem);
+  }
+
+  .promocoes-container-card-compra {
+    display: flex;
+    margin-left: clamp(1rem, 5vw, 3rem);
+    gap: clamp(1rem, 5vw, 3rem);
+  }
+
 }
 
 
@@ -1166,6 +1337,31 @@ header {
   .promocoes-container-card {
     height: clamp(150px, 15vh, 400px);
     width: 90%;
+  }
+
+  .promocoes-container-card {
+    height: clamp(180px, 28vw, 300px);
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .promocoes-container-card h1 {
+    margin-left: clamp(1rem, 5vw, 3rem);
+    font-size: clamp(1.3rem, 5vw, 2.5rem);
+  }
+
+  .promocoes-container-card p {
+    margin-left: clamp(1rem, 5vw, 3rem);
+    font-size: clamp(0.8rem, 2.8vw, 1.2rem);
+  }
+
+  .promocoes-container-card-compra {
+    display: flex;
+    margin-left: clamp(1rem, 5vw, 3rem);
+    gap: clamp(1rem, 5vw, 3rem);
   }
 
 }

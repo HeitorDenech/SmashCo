@@ -60,9 +60,9 @@ function App() {
           {/* MENU */}
 
           <div className={`navbar-text ${menuOpen ? 'active' : ''}`}>
-            <a href="#">Menu</a>
+            <a href="#menusmooth">Menu</a>
             <a href="#">Combos</a>
-            <a href="#">Promoções</a>
+            <a href="#promocoessmooth">Promoções</a>
             <a href="#">Sobre</a>
             <a href="#">Contato</a>
           </div>
@@ -109,13 +109,13 @@ function App() {
 
         <section className="menu">
 
-          <div className="menu-content-text">
+          <div className="menu-content-text" id='menusmooth'>
 
             <div id="menu-title">
               <h1>Burguers <span> impressionantes</span></h1>
             </div>
 
-            <div id="menu-subtitle">
+            <div id="menu-subtitle" >
               <p>Ingredientes selecionados. Carne bovina 100% pura,
                 pão brioche artesanal, molhos autorais.</p>
             </div>
@@ -159,17 +159,37 @@ function App() {
           <p>Ofertas especiais</p>
           <h1>PROMOÇÕES <span> QUE VALEM.</span></h1>
 
-          <div className='promocoes-container'>
-            
+          <div className='promocoes-container' id="promocoessmooth">
+
             <div className='promocoes-container-card'>
+              <p>Combo dupla</p>
+              <h1>2 Smash + 2 Fritas + 2 Refris</h1>
+              <div className='promocoes-container-card-compra'>
+                <h2>R$79</h2>
+                <button>20% off</button>
+              </div>
+            </div>
+
+            <div className='promocoes-container-card'>
+
+              <p>Happy Hour</p>
+              <h1>Qualquer burger + cerveja artesanal
+                R$ 58</h1>
+              <div className='promocoes-container-card-compra'>
+                <h2>R$45</h2>
+                <button>SEG – QUI 17H–20H</button>
+              </div>
 
             </div>
 
             <div className='promocoes-container-card'>
 
-            </div>
-
-            <div className='promocoes-container-card'>
+              <p>FAMÍLIA SMASH</p>
+              <h1>4 Burgers + 4 Fritas + Sobremesa</h1>
+              <div className='promocoes-container-card-compra'>
+                <h2>R$149</h2>
+                <button>22% off</button>
+              </div>
 
             </div>
 
