@@ -1364,6 +1364,7 @@ header {
     display: flex;
     margin-left: clamp(1rem, 5vw, 3rem);
     gap: clamp(1rem, 5vw, 3rem);
+    padding-bottom: clamp(10px, 20px, 30px);
   }
 
 }
