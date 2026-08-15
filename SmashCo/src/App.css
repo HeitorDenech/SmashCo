@@ -1340,7 +1340,7 @@ header {
   }
 
   .promocoes-container-card {
-    height: clamp(200px, 30vw, 400px);
+    height: clamp(180px, 220px, 450px);
     width: 90%;
     display: flex;
     align-items: flex-start;
