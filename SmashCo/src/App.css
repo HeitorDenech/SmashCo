@@ -1346,6 +1346,8 @@ header {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    padding: 5vh 2rem;
+    box-sizing: border-box;
   }
 
   .promocoes-container-card h1 {
