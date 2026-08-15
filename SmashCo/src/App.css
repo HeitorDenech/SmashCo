@@ -1380,7 +1380,7 @@ header {
 
   .promocoes-container-card {
     height: clamp(180px, 220px, 450px);
-    width: 60%;
+    width: 80%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
