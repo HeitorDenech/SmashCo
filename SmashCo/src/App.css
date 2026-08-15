@@ -1373,7 +1373,7 @@ header {
 
   .promocoes-container-card {
     height: clamp(180px, 220px, 450px);
-    width: 90%;
+    width: 80%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -1384,12 +1384,12 @@ header {
 
   .promocoes-container-card h1 {
     margin-left: clamp(1rem, 5vw, 3rem);
-    font-size: clamp(1.3rem, 5vw, 2.5rem);
+    font-size: clamp(1.3rem, 4.5vw, 2.5rem);
   }
 
   .promocoes-container-card p {
     margin-left: clamp(1rem, 5vw, 3rem);
-    font-size: clamp(0.8rem, 2.8vw, 1.2rem);
+    font-size: clamp(0.8rem, 2.5vw, 1.2rem);
   }
 
   .promocoes-container-card-compra {
