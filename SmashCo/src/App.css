@@ -1618,7 +1618,7 @@ header {
   }
 
   .menu-content-burguers {
-    margin-left: 3vw;
+    margin-left: 0vw;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 1rem;
