@@ -5,7 +5,6 @@ import smash from './assets/smash.avif'
 import smashlogo from './assets/smashlogo.png'
 import smashinferno from './assets/smashinferno.avif'
 import smashsalada from './assets/smashsalada.avif'
-import promocaofamilia from './assets/promocaofamilia.avif'
 
 function App() {
   const [scrolled, setScrolled] = useState(false)
