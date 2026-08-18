@@ -5,10 +5,14 @@ import smash from './assets/smash.avif'
 import smashlogo from './assets/smashlogo.png'
 import smashinferno from './assets/smashinferno.avif'
 import smashsalada from './assets/smashsalada.avif'
+import promocaofamilia from './assets/promocaofamilia.avif'
 
 function App() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const handleNavClick = () => {
+    setMenuOpen(false)
+  }
 
   useEffect(() => {
     let ticking = false
@@ -60,11 +64,11 @@ function App() {
           {/* MENU */}
 
           <div className={`navbar-text ${menuOpen ? 'active' : ''}`}>
-            <a href="#menusmooth">Menu</a>
-            <a href="#">Combos</a>
-            <a href="#promocoessmooth">Promoções</a>
-            <a href="#">Sobre</a>
-            <a href="#">Contato</a>
+            <a href="#menusmooth" onClick={handleNavClick}>Menu</a>
+            <a href="#" onClick={handleNavClick}>Combos</a>
+            <a href="#promocoessmooth" onClick={handleNavClick}>Promoções</a>
+            <a href="#" onClick={handleNavClick}>Sobre</a>
+            <a href="#" onClick={handleNavClick}>Contato</a>
           </div>
 
           <div className="navbar-btn">
@@ -122,6 +126,8 @@ function App() {
 
           </div>
 
+          {/* --------------------------MENU------------------------------ */}
+
           <div className="menu-content-burguers">
 
             <div className="menu-content-burguers-card">
@@ -154,6 +160,8 @@ function App() {
           </div>
 
         </section>
+
+        {/* -----------------------------PROMOCOES-------------------------------- */}
 
         <section className='promocoes'>
           <p>Ofertas especiais</p>
@@ -191,6 +199,34 @@ function App() {
                 <button>22% off</button>
               </div>
 
+            </div>
+
+          </div>
+
+        </section>
+
+        {/* ---------------------------COMBO-FAMILIA------------------------ */}
+
+        <section className="combofamilia">
+
+          <div className="combofamilia-content">
+
+            <p>Oferta especial</p>
+
+            <h1>
+              FAMÍLIA
+              <span>SMASH.</span>
+            </h1>
+
+            <p>
+              4 burgers, 4 fritas e uma sobremesa para
+              compartilhar. O combo perfeito para reunir
+              todo mundo.
+            </p>
+
+            <div className="combofamilia-content-compra">
+              <h2>R$149</h2>
+              <button>22% OFF</button>
             </div>
 
           </div>
