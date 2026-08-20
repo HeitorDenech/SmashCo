@@ -483,6 +483,9 @@ header {
 
   position: relative;
   overflow: hidden;
+
+  /* object-fit: cover; */
+
 }
 
 .combofamilia::before {
@@ -745,7 +748,7 @@ header {
 
 
 
-@media screen and (min-width: 1024px) and (max-width:1439px) {
+@media screen and (min-width: 1025px) and (max-width:1439px) {
 
   .hero-content {
     display: flex;
@@ -850,20 +853,18 @@ header {
 
 
 
-@media screen and (min-width: 768px) and (max-width:1023px) {
+@media screen and (min-width: 768px) and (max-width:1024px) {
+
+  /* ----------------------------NAVBAR--------------------------------- */
 
   header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 70px;
-    z-index: 9999;
   }
 
   .navbar {
-    width: 100%;
     height: 70px;
+    padding: 0 2rem;
+    box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -875,20 +876,14 @@ header {
     margin: 0;
   }
 
-  /* MOSTRA O HAMBÚRGUER */
-
   .hamburger {
     display: flex;
     z-index: 1002;
   }
 
-  /* ESCONDE O BOTÃO PEDIR AGORA */
-
   .navbar-btn {
     display: none;
   }
-
-  /* MENU FECHADO */
 
   .navbar-text {
     position: absolute;
@@ -902,11 +897,11 @@ header {
     align-items: center;
 
     gap: 2rem;
-
     padding: 2rem 0;
 
     background-color: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 
     transform: translateY(-20px);
     opacity: 0;
@@ -917,10 +912,8 @@ header {
     z-index: 1001;
   }
 
-  /* MENU ABERTO */
-
   .navbar-text.active {
-    transform: translateY(1);
+    transform: translateY(0);
     opacity: 1;
     visibility: visible;
   }
@@ -929,125 +922,213 @@ header {
     font-size: 1.1rem;
   }
 
-  /* ANIMAÇÃO DO HAMBÚRGUER */
 
-  .hamburger.active span:nth-child(1) {
-    transform: translateY(9.5px) rotate(45deg);
-  }
-
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: translateY(-9.5px) rotate(-45deg);
-  }
-
-
-
-  /* ----------------------------------MAIN------------------------------------ */
+  /* =========================
+     HERO
+  ========================= */
 
   .hero {
     position: relative;
-    height: 100vh;
+    min-height: 100svh;
+    height: auto;
+
     background-image: url('./assets/smash.avif');
     background-size: cover;
     background-position: center;
+
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
-    padding-left: 2rem;
     flex-direction: column;
+
+    padding: 100px 3rem 60px;
+    box-sizing: border-box;
   }
 
-
   .hero-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 5vh;
-    width: 30vw;
-    border-radius: 0.5rem;
-    border: 1px solid var(--color-brand-orange);
-    font-family: var(--font-display);
-    font-size: 0.45rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: var(--color-brand-orange);
-    z-index: 1001;
+    width: clamp(220px, 32vw, 320px);
+    height: 40px;
+
+    font-size: 0.5rem;
   }
 
   #hero-title {
-    font-family: var(--font-display);
-    font-size: 5rem;
-    width: 40%;
-    z-index: 1001;
+    font-size: clamp(3.5rem, 7vw, 5rem);
+    width: min(500px, 70%);
+    line-height: 0.95;
   }
 
   #hero-subtitle {
-    font-family: var(--font-display);
-    font-size: 1.2rem;
-    width: 60%;
-    z-index: 1001;
-    color: var(--color-brand-muted);
+    width: min(600px, 70%);
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    line-height: 1.3;
   }
 
-  /* --------------------------------MENU----------------------------------- */
+
+  /* =========================
+     MENU
+  ========================= */
+
+  .menu {
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+  }
+
+  .menu-content-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 2rem;
+    margin-top: 0;
+  }
 
   #menu-title {
-    width: 15%;
-    text-transform: uppercase;
-    font-family: var(--font-display);
-    font-size: 1rem;
+    width: auto;
+    max-width: 35%;
+    font-size: clamp(1rem, 2vw, 1.4rem);
   }
 
   #menu-subtitle {
-    width: 20%;
-    text-transform: uppercase;
-    font-family: var(--font-display);
-    font-size: 0.9rem;
-    color: var(--color-brand-muted);
+    width: auto;
+    max-width: 45%;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
   }
 
   .menu-content-burguers {
-    flex-direction: row;
-    justify-content: start;
-    gap: 1rem;
-    margin-left: 2rem;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 1.5rem;
+
+    margin: 2rem 0 0;
   }
 
   .menu-content-burguers-card {
-    margin-top: 1rem;
-    width: 45%;
-    min-height: 60vh;
+    width: 100%;
+    max-height: 600px;
+    min-height: 300px;
+
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
-  /* -------------------------------PROMOÇÕES--------------------------- */
+  .menu-content-burguers-card img {
+    display: block;
+
+    width: 100%;
+    min-height: 220px;
+    max-height: 340px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  .menu-content-burguers-card h1 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    margin: 1rem;
+  }
+
+  .menu-content-burguers-card p {
+    font-size: clamp(0.85rem, 1.4vw, 1rem);
+    margin: 0 1rem;
+    line-height: 1.4;
+  }
+
+  .menu-content-burguers-card h2 {
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    margin: 1.5rem 1rem;
+  }
+
+
+  /* =========================
+     PROMOÇÕES
+  ========================= */
+
+  .promocoes {
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+  }
 
   .promocoes p {
-    margin-left: 5vh;
+    margin-left: 0;
   }
 
   .promocoes h1 {
-    margin-left: 5vh;
+    margin-left: 0;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+  }
+
+  .promocoes span {
+    margin-top: -1.1vh;
   }
 
   .promocoes-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: start;
-    align-items: center;
-    gap: 0px;
+    width: 100%;
 
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 1.5rem;
   }
 
   .promocoes-container-card {
-    margin-top: 2vh;
-    margin-left: 3vh;
-    height: clamp(150px, 25vh, 400px);
-    width: 43%;
+    width: 100%;
+    height: auto;
+
+    min-height: 230px;
+
+    margin: 0;
+
+    box-sizing: border-box;
   }
 
+  .promocoes-container-card h1 {
+    margin-left: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+  }
+
+  .promocoes-container-card p {
+    margin-left: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+  }
+
+  .promocoes-container-card-compra {
+    margin-left: clamp(1rem, 2vw, 1.5rem);
+    gap: 1rem;
+  }
+
+
+  /* =========================
+     COMBO FAMÍLIA
+  ========================= */
+
+  .combofamilia {
+    min-height: 600px;
+    height: 75vh;
+
+    padding: 4rem;
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  .combofamilia-content {
+    width: min(550px, 65%);
+  }
+
+  .combofamilia-content h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+  }
+
+  .combofamilia-content p {
+    max-width: 500px;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  }
 }
 
 
@@ -1507,13 +1588,13 @@ header {
 
   /* ----------------------COMBO-FAMILIA------------------------ */
 
-  .combofamilia{
+  .combofamilia {
     padding-left: 4rem;
   }
 
-  .combofamilia-content-compra button{
+  .combofamilia-content-compra button {
     font-size: 0.70rem;
-  padding: 0.8rem 1.6rem;
+    padding: 0.8rem 1.6rem;
   }
 
 }
